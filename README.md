@@ -66,3 +66,22 @@
 | `super + alt + Up`    | Resize window to the north.       |
 | `super + alt + Right` | Resize window to the east.        |
 | `@Print`              | Launch Flameshot GUI.             |
+
+
+rm -rf ~/.oh-my-zsh
+yes | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+rm -f ~/.p10k.zsh
+cp -v $RPATH/CONFIGS/p10k.zsh ~/.p10k.zsh
+
+# install zsh plugins
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+rm -f ~/.zshrc
+# install zsh-autocomplete?
+cp -v $RPATH/CONFIGS/zshrc ~/.zshrc
+
+# install fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+yes | ~/.fzf/install
