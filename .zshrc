@@ -229,8 +229,8 @@ if [ -x /usr/bin/dircolors ]; then
     export LS_COLORS="$LS_COLORS:ow=30;44:" # fix ls color for folders with 777 permissions
 
     alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
 
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
@@ -269,8 +269,8 @@ alias catn='/usr/bin/batcat'
 alias catnl='/usr/bin/cat'
 
 # nvim
-alias nvim='/opt/nvim/bin/nvim'
-alias n='/home/s3rp3nt/.config/kitty/nvim_custom.sh'
+alias nvim='/usr/bin/nvim'
+alias n='~/.config/scripts/nvim_custom.sh'
 
 #Plugins
 source /usr/share/zsh-sudo-plugin/sudo.plugin.zsh
