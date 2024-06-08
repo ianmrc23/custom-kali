@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-dir="$HOME/.config/polybar/scripts/rofi"
+dir="$HOME/.config/scripts/rofi"
 
 rofi_command="rofi -no-config -theme $dir/powermenu.rasi"
 
