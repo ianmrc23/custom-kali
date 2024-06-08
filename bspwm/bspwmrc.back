@@ -1,0 +1,17 @@
+#! /bin/sh
+
+wmname LG3D &
+
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+bspc monitor -d I II III IV V VI VII VIII IX
+
+bspc config bottom_padding     40
+
+feh --bg-fill ~/.config/assets/space.png
+
+~/.config/polybar/launch.sh
+
+bspc config focus_follows_pointer true
+
+xsetroot -cursor_name left_ptr &
